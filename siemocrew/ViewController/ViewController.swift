@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
     private var profilePresenter = ProfilePrensenter()
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "SIEMO Crew"
@@ -29,7 +29,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! ProfileCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cardItem", for: indexPath) as! ProfileCell
         cell.setContentView(profile: profilePresenter.getDataProfiles()[indexPath.row])
         cell.selectionStyle = .none
         return cell

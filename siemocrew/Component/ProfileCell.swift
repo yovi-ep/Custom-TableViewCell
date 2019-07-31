@@ -12,8 +12,8 @@ class ProfileCell: UITableViewCell {
 
     @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var imgIcon: UIImageView!
-    @IBOutlet weak var tvTitle: UITextView!
-    @IBOutlet weak var tvDescription: UITextView!
+    @IBOutlet weak var tvTitle: UILabel!
+    @IBOutlet weak var tvDescription: UILabel!
 
     func setContentView(profile: Profile) {
         imgIcon.image = UIImage(named: profile.image)

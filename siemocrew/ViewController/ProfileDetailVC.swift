@@ -13,8 +13,6 @@ class ProfileDetailVC: UIViewController {
     @IBOutlet weak var imgProfile: CyrcleImageView!
     @IBOutlet weak var tvName: UILabel!
     @IBOutlet weak var tvPosition: UILabel!
-    @IBOutlet weak var tvDescription: UILabel!
-    
     var profile: Profile!
     
     override func viewDidLoad() {
@@ -31,6 +29,5 @@ class ProfileDetailVC: UIViewController {
         imgProfile.image = UIImage(named: profile.image)
         tvName.text = profile.name
         tvPosition.text = profile.position
-        tvDescription.text = profile.description
     }
 }
